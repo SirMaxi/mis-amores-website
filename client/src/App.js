@@ -8,6 +8,8 @@ import Home from './components/pages/Home';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import UploadToy from './components/pages/UploadToy';
 
 import './style.css';
 
@@ -60,9 +62,11 @@ const App = () => {
             <Header />
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/register' component={Register} />
+                <Route path='/login' component={Login} />
+                <Route path='/register' component={Register} />
+                <Route exact path='/toys/create' component={UploadToy} />
             </Switch>
+            <Footer/>
             </UserContext.Provider>
         </BrowserRouter>
     );

@@ -9,6 +9,7 @@ const app = express();
 //Middleware (Se activa antes de que intentemos interactuar con alguna ruta con express)
 app.use(express.json()); //Este es el body parser, que va a dejar que podamos usar req.body.(lo que queramos sacar en un json)
 app.use(cors());
+app.use("/uploads", express.static("uploads"));
 
 //Arrancamos el servidor
 const PORT = process.env.PORT || 5000;
