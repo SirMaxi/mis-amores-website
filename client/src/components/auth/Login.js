@@ -30,7 +30,7 @@ export default function Login() {
     };
 
     return (
-        <div>
+        <div className="p-4">
             <div className="row">
           <div className="col-md-6 mt-5 mx-auto">
             <form noValidate onSubmit={submit}>

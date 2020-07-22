@@ -13,7 +13,7 @@ export default function Footer() {
                         </>
                     ) : (
                         <>
-                    <footer className="footer bg-dark">
+                    <footer className="bg-dark ">
                         <div className="container text-white">
                         <br />
                             <div className="row">

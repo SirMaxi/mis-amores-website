@@ -34,10 +34,16 @@ router.post("/uploadImage", (req, res) => {
     })
 });
 
-router.get('/toys', async(req, res) => {
+router.get('/getToys', async(req, res) => {
     const toys = await Toy.find();
     res.json(toys);
 })
+
+router.post('/getToysPost', async(req, res) => {
+    const toys = await Toy.find();
+    res.json(toys);
+
+});
 
 router.post('/create', async (req, res) => {
     try{
@@ -53,13 +59,23 @@ router.post('/create', async (req, res) => {
     }
 });
 
-router.delete('/delete/:id', auth, async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
     try{
         const deletedToy = await Toy.findByIdAndDelete(req.params.id);
         res.json(deletedToy);
     } catch(err){
         res.status(500).json({error: err.message});
     }
+});
+
+router.put('/edit/:id', async (req, res) => {
+    const { titulo, descripcion, precio } = req.body;
+    await Toy.findOneAndUpdate({ _id: req.params.id }, {
+        titulo,
+        descripcion,
+        precio
+    });
+    res.json({ mensaje: 'Nota Editada' });
 });
 
 

@@ -11,8 +11,8 @@ export default function UploadToy() {
     const [titulo, setTitulo] = useState("");
     const [descripcion, setDescripcion] = useState("");
     const [precio, setPrecio] = useState(0);
-    const [images, setImages] = useState([]);
-        
+    const [imagenes, setImagenes] = useState([]);
+    
     const onTituloChange = (event) => {
         setTitulo(event.currentTarget.value);
     }
@@ -25,21 +25,25 @@ export default function UploadToy() {
         setPrecio(event.currentTarget.value);
     }
 
-    const updateImages = (newImages) => {
-        setImages(newImages);
+    const updateImagenes = (newImagenes) => {
+        setImagenes(newImagenes);
     }
 
     const onSubmit = async (e) => {
         e.preventDefault();
         
+
+        if(!titulo || !precio || !imagenes){
+            return alert('Titulo, descripcion e imagen son obligatorios');   
+        }
+        
         const variables = {
             titulo,
             descripcion,
             precio,
-            images
+            imagenes
         }
 
-        console.log(variables);
 
         await Axios.post('http://localhost:5000/toys/create', variables)
             .then(response => {
@@ -49,9 +53,9 @@ export default function UploadToy() {
                 } else {
                     alert('Hubo un problema al querer subir el producto');
                 }
-            })
+            });
     }
-
+    
     return (
         <div className="container">
             <br/>
@@ -62,7 +66,7 @@ export default function UploadToy() {
                 onSubmit={onSubmit}
             >
                 <div>
-                    <FileUpload refreshFunction={updateImages}/>
+                    <FileUpload refreshFunction={updateImagenes}/>
                     <br/>
                     <br/>
                     <label htmlFor="titulo">Titulo</label>

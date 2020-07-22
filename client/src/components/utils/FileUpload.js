@@ -4,7 +4,8 @@ import Axios from 'axios';
 
 function FileUpload(props) {
 
-    const [Images, setImages] = useState([]);
+    const [imagenes, setImagenes] = useState([]);
+
 
     //Esta funcion es para cuando se selecciona la imagen, que la envie por axios con la constante config a toys/uploadImage
     const onDrop = (files) => {
@@ -19,25 +20,25 @@ function FileUpload(props) {
         Axios.post('http://localhost:5000/toys/uploadImage', formData, config)
             .then(response => {
                 if(response.data.success) {
-                    setImages([...Images, response.data.image])
-                    props.refreshFunction([...Images, response.data.image])
+                    setImagenes([...imagenes, response.data.image])
+                    props.refreshFunction([...imagenes, response.data.image])
                 } else{
                     alert('Fallo al guardar la imagen en el server');
                 }
             })
     }
 
-    const onDelete = (image) => {
+    const onDelete = (imagen) => {
         //En currentIndex ponemos el indice de la imagen que vamos a borrar
-        const currentIndex = Images.indexOf(image);
+        const currentIndex = imagenes.indexOf(imagen);
 
         //Usamos splice para eliminar la imagen
-        let newImages = [...Images];
-        newImages.splice(currentIndex, 1);
+        let newImagenes = [...imagenes];
+        newImagenes.splice(currentIndex, 1);
 
         //Refrescamos el nuevo array de imagenes
-        setImages(newImages);
-        props.refreshFunction(newImages);
+        setImagenes(newImagenes);
+        props.refreshFunction(newImagenes);
     }
 
   return (
@@ -64,7 +65,7 @@ function FileUpload(props) {
       </Dropzone>
 
         <div style={{ display:'flex', width:'350px', height: '240px', overflowX: 'scroll' }}>
-            {Images.map((image, index) => (
+            {imagenes.map((image, index) => (
                 <div onClick={() => onDelete(image)} key={index}>
                     <img
                         style={{ minWidth: '300px', width: '300px', height: '240px'}} 
