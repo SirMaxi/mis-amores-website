@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FileUpload from '../utils/FileUpload';
+import FileUpload from '../../utils/FileUpload';
 import { useHistory } from 'react-router-dom';
 import Axios from 'axios';
 

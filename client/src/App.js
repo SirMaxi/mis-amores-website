@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import UserContext from './context/UserContext';
 import Axios from 'axios';
-import Home from './components/pages/Home';
+import Home from './components/pages/Home/Home';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import UploadToy from './components/pages/UploadToy';
-import EditToy from './components/pages/EditToy';
+import UploadToy from './components/pages/UploadToy/UploadToy';
+import EditToy from './components/pages/EditToy/EditToy';
+import ContactUs from './components/pages/ContactUs/ContactUs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './style.css';
@@ -67,8 +68,9 @@ const App = () => {
                 <Route path='/register' component={Register} />
                 <Route exact path='/toys/create' component={UploadToy} />
                 <Route exact path='/toys/edit' component={EditToy} />
+                <Route exact path='/contact' component={ContactUs} />
             </Switch>
-            <Footer/>
+            <Footer/> 
             </UserContext.Provider>
         </BrowserRouter>
     );

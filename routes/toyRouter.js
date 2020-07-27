@@ -75,7 +75,7 @@ router.put('/edit/:id', async (req, res) => {
         descripcion,
         precio
     });
-    res.json({ mensaje: 'Nota Editada' });
+    res.json({ success: true });
 });
 
 

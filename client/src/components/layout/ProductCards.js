@@ -18,14 +18,12 @@ export default function ProductCards() {
 
   const renderCards = cards.map((toy, index) => {
     return (
-      <div className="col-md-4" key={index}>
+      <div className="col-md-4 pt-4" key={index} >
         <div className="card mb-4 shadow-sm">
           <div className="card h-100">
-            <img
-              src={`http://localhost:5000/${toy.imagenes}`}
-              alt="productImagen"
-              className="card-img-top"
-            />
+          <div className="embed-responsive embed-responsive-4by3">
+            <img alt="" className="card-img-top embed-responsive-item" src={`http://localhost:5000/${toy.imagenes}`} />
+          </div>
             <div className="card-body">
               <h5 className="card-title">{toy.titulo}</h5>
               <p className="card-text">{toy.descripcion}</p>

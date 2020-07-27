@@ -30,7 +30,7 @@ export default function Login() {
     };
 
     return (
-        <div className="p-4">
+        <div className="p-4" style = {{height:"75.4vh"}}>
             <div className="row">
           <div className="col-md-6 mt-5 mx-auto">
             <form noValidate onSubmit={submit}>

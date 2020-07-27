@@ -1,50 +1,14 @@
 import React from 'react';
 import AuthOptions from '../auth/AuthOptions';
-import SearchFeature from './SearchFeature';
-//import Axios from 'axios';
+import "../../style.css";
 
 
 export default function Header() {
 
-  // constructor(props){
-  //   this.onChangeSearchTitle = this.onChangeSearchTitle.bind(this);
-  //   this.searchTitle = this.searchTitle.bind(this);
-
-  //   this.state = {
-  //     searchTitle: ''
-  //   };
-  // }
-
-  // onChangeSearchTitle(e) {
-  //   const searchTitle = e.target.value;
-
-  //   this.setState({
-  //     searchTitle: searchTitle
-  //   });
-  // }
-
-  // searchTitle() {
-  //   Axios.post("http://localhost:5000/toys/getToysPost")
-  //     .then(response => {
-  //       this.setState({
-  //         titulo: response.data
-  //       });
-  //       console.log(response.data);
-  //     })
-  //     .catch(e => {
-  //       console.log(e);
-  //     });
-  // }
-
-
-
-  //render() {
-
-
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="/">
-        <img src="http://placehold.it/150x50?text=Logo" width="40" height="40" alt="" loading="lazy"/>
+    <nav className="layout navbar navbar-expand-lg py-0">
+        <img src={ require('../../imageLogo/ProyectoLogoMama.jpg') } width="60" alt="" loading="lazy" className="mr-3"/>
+        <a className="navbar-brand py-0" href="/">
           Los amores de la tia Jenny
         </a>
 
@@ -55,10 +19,9 @@ export default function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto mr-4">
             <AuthOptions />
-          </ul>
-            <SearchFeature />         
+          </ul>        
         </div>
     </nav>
     )
   }
-//}
+

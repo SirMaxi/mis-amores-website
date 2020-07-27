@@ -24,7 +24,7 @@ export default function AuthOptions() {
 
     return (
         //Si hay un usuario logeado, mostramos el boton de logout, si no hay usuario logeado mostramos el boton de login
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg">
             {userData.user ? (
                 <>
                 <li className="nav-item active">
@@ -40,7 +40,7 @@ export default function AuthOptions() {
                     <a className="nav-link" href="/">Muñecos</a>
                 </li>
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">Contacto</a>
+                    <a className="nav-link" href="/contact">Contacto</a>
                 </li>
                 <li className="nav-item active">
                     <a onClick={login} className="nav-link" href="/login">Login</a>
