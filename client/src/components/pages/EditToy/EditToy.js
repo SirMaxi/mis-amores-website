@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 export default function EditToy(props) {
 
-    //Traemos las propiedades de la carta que hicimos con el history push
+    //Traemos las propiedades de la card que hicimos con el history push
     const { data } = props.location.state;
     console.log(data.value.titulo);
 

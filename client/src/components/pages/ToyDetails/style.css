@@ -1,0 +1,55 @@
+#card {
+  background-color: rgb(26, 172, 177);
+}
+
+#titulo {
+  font-size: 4rem;
+  padding-top: 0;
+  font-family: "Lato", sans-serif;
+}
+
+#descripcion {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: "Mulish", sans-serif;
+}
+
+#precio {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#containerSize {
+  margin-bottom: 10rem;
+  position: relative;
+}
+
+#descriptionContainer {
+  padding: 70px;
+}
+
+.card-divider {
+  margin: 1rem;
+  border-top: 1px solid #ffffff;
+}
+
+.background-cover {
+  background-color: rgb(39, 39, 39);
+  width: 100%;
+}
+
+.text-center {
+  font-family: "Nunito", sans-serif;
+}
+
+#DescriptionToy {
+  margin: auto;
+}
+
+#ImageToy {
+  margin: auto;
+}
+
+#back {
+  margin-top: 1rem;
+}

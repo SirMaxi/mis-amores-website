@@ -48,20 +48,20 @@ function FileUpload(props) {
             multiple={false}
             maxSize={90000000}
         >
-        {({ getRootProps, getInputProps }) => (
-            <div
-                className="card"
-                style={{ width: '300px', height: '240px', border: '1px solid lightgray', justifyContent: 'center', alignItems: 'center', display: 'flex'}}
-                {...getRootProps()}
-            >
-            <input {...getInputProps()} />
-            <svg 
-                width="4em" viewBox="0 0 16 16" className="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
-                <path fillRule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
-            </svg>
-            </div>
-        )}
+            {({ getRootProps, getInputProps }) => (
+                <div
+                    className="card border-light mr-5 mb-5"
+                    style={{ width: '15rem', height: '15rem', border: '0px', justifyContent: 'center', alignItems: 'center', display: 'flex'}}
+                    {...getRootProps()}
+                >
+                <input {...getInputProps()} />
+                <svg 
+                    width="4em" viewBox="0 0 16 16" className="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+                    <path fillRule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+                </svg>
+                </div>
+            )}
       </Dropzone>
 
         <div style={{ display:'flex', width:'350px', height: '240px', overflowX: 'scroll' }}>

@@ -1,0 +1,18 @@
+.fas[data-count] {
+  position: relative;
+}
+.fas[data-count]:after {
+  position: absolute;
+  right: 0.1em;
+  top: -0.2em;
+  content: attr(data-count);
+  padding: 0.5em;
+  color: black;
+  text-align: center;
+  min-width: 2em;
+  font: bold 0.4em sans-serif;
+}
+
+.Basket :hover {
+  text-decoration: none;
+}

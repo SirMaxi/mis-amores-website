@@ -42,7 +42,6 @@ router.get('/getToys', async(req, res) => {
 router.post('/getToysPost', async(req, res) => {
     const toys = await Toy.find();
     res.json(toys);
-
 });
 
 router.post('/create', async (req, res) => {
@@ -59,6 +58,22 @@ router.post('/create', async (req, res) => {
     }
 });
 
+router.get('/toy/:id', async (req, res) => {
+    const toy = await Toy.findById({ _id: req.params.id });
+    res.json(toy);
+})
+
+router.put('/edit/:id', async (req, res) => {
+    const { titulo, descripcion, precio, categoria } = req.body;
+    await Toy.findOneAndUpdate({ _id: req.params.id }, {
+        titulo,
+        descripcion,
+        precio,
+        categoria
+    });
+    res.json({ success: true });
+});
+
 router.delete('/delete/:id', async (req, res) => {
     try{
         const deletedToy = await Toy.findByIdAndDelete(req.params.id);
@@ -68,15 +83,6 @@ router.delete('/delete/:id', async (req, res) => {
     }
 });
 
-router.put('/edit/:id', async (req, res) => {
-    const { titulo, descripcion, precio } = req.body;
-    await Toy.findOneAndUpdate({ _id: req.params.id }, {
-        titulo,
-        descripcion,
-        precio
-    });
-    res.json({ success: true });
-});
 
 
 module.exports = router;

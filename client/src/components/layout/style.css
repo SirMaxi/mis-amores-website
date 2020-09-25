@@ -1,0 +1,60 @@
+.navbar {
+  background-color: rgb(117, 10, 85);
+}
+
+.nav-item {
+  font-size: 1.7rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#logo {
+  max-height: 8rem;
+}
+
+#letras {
+  max-height: 8rem;
+}
+
+.footer {
+  background-color: rgb(117, 10, 85);
+}
+
+.footer-copyright {
+  background-color: rgb(85, 2, 60);
+}
+
+.fab {
+  font-size: 5rem;
+}
+
+.fa-facebook-square {
+  color: dodgerblue;
+}
+
+.fa-instagram {
+  color: mediumslateblue;
+}
+
+.inner {
+  overflow: hidden;
+}
+
+.inner img {
+  transition: all 1.5s ease;
+}
+
+.inner:hover img {
+  transform: scale(1.5);
+}
+
+.card-title {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  margin-top: 6px;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  color: rgb(141, 141, 141);
+  font-family: "Roboto", sans-serif;
+}

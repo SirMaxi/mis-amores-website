@@ -15,6 +15,9 @@ const toySchema = new mongoose.Schema ({
     precio: {
         type: Number,
         default: 0
+    },
+    categoria: {
+        type: String
     }
 }, { timestamps: true });
 

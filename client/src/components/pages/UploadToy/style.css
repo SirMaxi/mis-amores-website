@@ -1,0 +1,12 @@
+.form-control {
+    margin-bottom: 3rem;
+}
+
+#tituloUpload {
+    margin-bottom: 3rem;
+    font-family: 'Arimo', sans-serif;
+}
+
+#descripcionUpload {
+    height: 10rem;
+}

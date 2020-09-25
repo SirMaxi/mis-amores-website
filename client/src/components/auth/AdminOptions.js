@@ -31,13 +31,10 @@ return (
         <div>
                 {userData.user ? (
                 <>
-                <br/>
-                <button className="btn btn-warning" onClick={() => (editToy(props))}>
+                <button className="col btn btn-warning" onClick={() => (editToy(props))}>
                     Editar Muñeco
                 </button>
-                <br/>       
-                <br/>       
-                <button className="btn btn-danger" onClick={() => deleteToy(props.value._id)}>
+                <button className="col btn btn-danger" onClick={() => deleteToy(props.value._id)}>
                     Eliminar Muñeco
                 </button>
                 
